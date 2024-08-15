@@ -11,19 +11,31 @@ namespace exemplo3
         {
             if (double.TryParse(textBox1.Text, out double value))
             {
-                value = value / 10;
+                
+                double x = value;
+                
                 // Adiciona 500 ao valor se a primeira CheckBox estiver marcada
+                if (checkBox1.Checked)
+                {
+                   
+                     x -= (value * 0.10);
+                     
+                }
                 if (checkBox2.Checked)
                 {
-                    double x = value;
-                    value = value - (value * 0.20) ;
-                    
+                     x -= (value * 0.20);
+                     
                 }
 
                 // Adiciona 350 ao valor se a segunda CheckBox estiver marcada
-                if (checkBox1.Checked)
+
+
+                if (checkBox3.Checked)
                 {
-                    value = value * 0.10;
+
+                    x -= (value * 0.70) ;
+                        
+                  
                 }
 
                 // Exibe o resultado no Label
@@ -44,6 +56,16 @@ namespace exemplo3
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

@@ -36,6 +36,8 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            checkBox3 = new CheckBox();
+            label5 = new Label();
             SuspendLayout();
             // 
             // checkBox1
@@ -48,6 +50,7 @@
             checkBox1.TabIndex = 0;
             checkBox1.Text = "Desconto de 10%";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // checkBox2
             // 
@@ -71,7 +74,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(643, 238);
+            button1.Location = new Point(641, 279);
             button1.Name = "button1";
             button1.Size = new Size(120, 36);
             button1.TabIndex = 3;
@@ -119,6 +122,27 @@
             label4.TabIndex = 8;
             label4.Text = "Desconto";
             // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox3.Location = new Point(638, 238);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(123, 19);
+            checkBox3.TabIndex = 9;
+            checkBox3.Text = "Desconto de 70%";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(530, 33);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 10;
+            label5.Text = "label5";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -126,6 +150,8 @@
             BackgroundImage = Properties.Resources.black_lamborghini_4k_eu_2560x1440;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
+            Controls.Add(checkBox3);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -150,5 +176,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private CheckBox checkBox3;
+        private Label label5;
     }
 }
